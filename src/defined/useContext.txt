@@ -1,0 +1,8 @@
+useContext cho phép chúng là làm việc với React Context trong 1 function component
+
+Để sử dụng useContext chúng ta truyền vào Hook này 1 tham số duy nhất đó là Context Object
+(được tạo bởi React.createContext) 
+
+    const AppContext = React.createContext({ foo: 'bar' });
+khi cần lấy giá trị của context trong funtional component chúng ta sẽ sử dụng:
+    const context = useContext(AppContext);

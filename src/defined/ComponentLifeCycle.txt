@@ -1,0 +1,41 @@
+React cho phép bạn tham gia vào mỗi giai đoạn của component
+Một component khi khởi chạy sẽ thông qua 4 giai đoạn
+    - initialization
+    - mounting
+    - updating
+    - unmounting
+
+1. Initialization
+    Đây là giai đoạn khởi tạo state và props
+    Điều này thường đc thực hiện trong constructor
+
+        class App extends React.Component {
+          constructor(props) {
+            super(props);
+            this.state = {
+              website: 'Học ReactJS cùng Freetuts.net'
+            };
+          }
+        }
+
+2. Mounting
+    Giai đoạn này nó thực hiện nhiệm vụ chuyển virtual DOM trong react => DOM
+    và hiển thị trên trình duyệt
+
+    Component sẽ được render lần đầu tiên
+    Có 3 phương thức để tham gia vào giai đoạn này
+
+        - componentWillMount()
+        - componentDidMount()
+        - 
+
+3. updating
+    Trong giai đoạn này dữ liệu của props và state sẽ được cập nhật
+    để đáp ứng với sự kiện của người dùng
+    Điều này dẫn đến việc re-render lại component
+
+4. Unmounting
+    Đây là bước cuối cùng trong mỗi component , khi tất cả các tác vụ hoàn thành
+    và bạn tiến hành unmount DOM 
+
+    Quá trình này chỉ có duy nhất 1 phương thức là componentWillUnmount()
